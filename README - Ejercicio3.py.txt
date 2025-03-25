@@ -1,23 +1,20 @@
 Descripción
-
-Este programa define una clase Estudiante que representa a un estudiante con atributos como nombre, edad y calificación. También incluye métodos para mostrar la información del estudiante y verificar si ha aprobado o reprobado según su calificación.
+Este programa define una clase `Producto` que representa un producto en una tienda, con atributos como nombre, precio y stock. También incluye métodos para verificar disponibilidad, vender y reabastecer el producto.
 
 Estructura del Código
-
 El código contiene lo siguiente:
-
-Clase Estudiante:
-
-__init__(self, nombre, edad, calificacion): Constructor que inicializa los atributos del estudiante.
-
-mostrar_informacion(self): Método que imprime en pantalla la información del estudiante.
-
-verificar_aprobacion(self): Método que determina si el estudiante aprobó (calificación >= 3.5) o reprobó.
+  - Clase `Producto`:
+  - `__init__(self, nombre, precio, stock)`: Constructor que inicializa los atributos del producto.
+  - `verificar_disponibilidad(self, cantidad)`: Método que verifica si hay suficiente stock para vender una cantidad solicitada.
+  - `vender(self, cantidad)`: Método que reduce el stock si hay disponibilidad o muestra un mensaje de falta de stock.
+  - `reabastecer(self, cantidad)`: Método que aumenta el stock del producto.
 
 Ejemplo de uso:
-
-Se crean dos instancias de la clase Estudiante.
-
-Se muestra la información de cada estudiante.
-
-Se verifica si cada estudiante ha aprobado o reprobado.
+  - Se crea un producto "Laptop" con un precio de 1200 y un stock inicial de 10 unidades.
+  - Se verifica la disponibilidad de 5 unidades.
+  - Se venden 3 unidades.
+  - Se verifica si hay 8 unidades disponibles.
+  - Se intenta vender 8 unidades (debe fallar por falta de stock).
+  - Se reabastece con 10 unidades adicionales.
+  - Se verifica nuevamente la disponibilidad de 8 unidades.
+  - Se venden 8 unidades.
